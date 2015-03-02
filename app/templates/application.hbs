@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<div id="dash-container">
+  <div class="row full-width">
+  	<div class="large-12 columns dash-header"><div id="logo"></div><div>Bob's Burgers Financial Report</div></div>
+  </div>
+  <div class="row full-width">
+    <div class="small-1 large-1 columns tabs-nav">
+        {{#link-to '2011' activeClass='active' tagName="button" class="button"}}2011{{/link-to}}
+        {{#link-to '2012' activeClass='active' tagName="button" class="button"}}2012{{/link-to}}
+        {{#link-to '2013' activeClass='active' tagName="button" class="button"}}2013{{/link-to}}
+        {{#link-to '2014' activeClass='active' tagName="button" class="button"}}2014{{/link-to}}
+    </div>
+    <div class="small-11 large-11 columns dash-main">
+		<div class="tab-content">
+			{{outlet}}
+		</div>
+    </div>
+  </div>
+</div>
