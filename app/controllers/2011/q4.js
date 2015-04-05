@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 			myRenderOptions:{
-				"height":"580",
+				"height":"540",
 				"width":"100%"
 			},
 			myChartData:{

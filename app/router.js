@@ -6,12 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('application', {path:'/'},function(){
-    this.route('2011');
-    this.route('2012');
-    this.route('2013');
-    this.route('2014');
-    });
   this.resource('2011', { path:'/2011' }, function(){
     this.route('q1');
     this.route('q2');

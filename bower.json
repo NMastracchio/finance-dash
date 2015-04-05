@@ -16,6 +16,6 @@
     "zingchart": "~2.0.5"
   },
   "devDependencies": {
-    "foundation": "zurb/bower-foundation#~5.5.1"
+    
   }
 }
