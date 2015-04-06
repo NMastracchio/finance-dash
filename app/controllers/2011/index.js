@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 			myRenderOptions:{
 				"height":"540",
-				"width":"100%"
+				"width":"100%",
+				"background-color":"none"
 			},
 			myChartData:{
 				"graphset":[
@@ -11,14 +12,17 @@ export default Ember.Controller.extend({
 			        "type":"waterfall",
 			        "x":0,
 			        "y":0,
+			        "font-family":"Noto Sans",
 			        "width":"100%",
 			        "height":"50%",
 			        "background-color":"none", //#F2F2F0
 			        "plotarea":{
 			            "margin":"dynamic",
-			            "margin-top":"20%"
+			            "margin-top":"14%",
+			            "margin-bottom":"18%"
 			        },
 			        "title":{
+			        	"font-family":"Noto Sans",
 			            "text":"Stockholder's Equity",
 			            "background-color":"none",
 			            "color":"#333"
@@ -33,9 +37,10 @@ export default Ember.Controller.extend({
 			            "line-color":"#666",
 			            "item":{
 			                "wrapText":true,
-			                "color":"#333"
+			                "color":"#333",
+			                "font-family":"Noto Sans"
 			            },
-			            "values":["Cash","Equipment","Short-term Assets","Other Assets","Total Assets","Current Product Liabilities","Accounts Payable","Accrued Expenses","Deferred Revenue","Stockholders' Equity"]
+			            "values":["Cash","Equipment","Short-term Assets","Other Assets","Total Assets","Current<br>Product Liabilities","Accounts Payable","Accrued Expenses","Deferred Revenue","Stockholders' Equity"]
 			        },
 			        "scaleY":{
 			            "tick":{
@@ -47,11 +52,13 @@ export default Ember.Controller.extend({
 			            },
 			            "label":{
 			                "text":"USD (in thousands)",
-			                "color":"#333"
+			                "color":"#333",
+			                "font-family":"Noto Sans"
 			            },
 			            "item":{
 			                "wrapText":true,
-			                "color":"#333"
+			                "color":"#333",
+			                "font-family":"Noto Sans"
 			            },
 			            "short":true,
 			            "thousandsSeparator":","
@@ -78,6 +85,7 @@ export default Ember.Controller.extend({
 			        },
 			        "tooltip":{
 			            "fontSize":15,
+			            "font-family":"Noto Sans",
 			            "align":"left",
 			            "borderRadius":3,
 			            "borderWidth":2,
@@ -94,7 +102,7 @@ export default Ember.Controller.extend({
 			        "plot":{
 			            "barWidth":0.75,
 			            "animation":{
-			                "speed":400,
+			                "speed":250,
 			                "method":1,
 			                "effect":4,
 			                "sequence":2
@@ -115,18 +123,21 @@ export default Ember.Controller.extend({
 					"background-color":"none",
 					"title":{
 						"text":"Company Liabilities Breakdown",
+						"font-family":"Noto Sans",
 						"background-color":"none",
 						"color":"#333"
 					},
 					"plot":{
-						"slice":50,
+						"slice":20,
 						"shadow":0,
 						"border-width":"5px",
 						"border-color":"#F2F2F0",
 						"value-box":{
 							"placement":"out",
 							"font-size":"10px",
-							"font-color":"#333"
+							"font-color":"#333",
+							"font-weight":"none",
+							"font-family":"Noto Sans"
 						},
 						"animation":{
 							"effect":"2",
@@ -136,8 +147,12 @@ export default Ember.Controller.extend({
 							"sequence":"1"
 						}
 					},
+					"plotarea":{
+						"margin": "1%"
+					},
 					"tooltip":{
 						"fontSize":15,
+						"font-family":"Noto Sans",
 						"align":"left",
 						"borderRadius":3,
 						"borderWidth":2,
@@ -153,22 +168,22 @@ export default Ember.Controller.extend({
 					},
 					"series":[
 					{
-						"text":"Current Product Libabilities",
+						"text":"Current Product<br>Libabilities",
 						"values":[924706],
 						"background-color":"#C4473F"
 					},
 					{
-						"text":"Accounts Payable",
+						"text":"Accounts<br>Payable",
 						"values":[87860],
 						"background-color":"#CE8580"
 					},
 					{
-						"text":"Accrued Expenses",
+						"text":"Accrued<br>Expenses",
 						"values":[63693],
 						"background-color":"#442C2B"
 					},
 					{
-						"text":"Deferred Revenue",
+						"text":"Deferred<br>Revenue",
 						"values":[148796],
 						"background-color":"#91352F"
 					}
@@ -183,18 +198,21 @@ export default Ember.Controller.extend({
 					"background-color":"none",
 					"title":{
 						"text":"Company Assets Breakdown",
+						"font-family":"Noto Sans",
 						"background-color":"none",
 						"color":"#333"
 					},
 					"plot":{
-						"slice":50,
+						"slice":20,
 						"shadow":0,
 						"border-width":"5px",
 						"border-color":"#F2F2F0",
 						"value-box":{
 							"placement":"out",
 							"font-size":"10px",
-							"font-color":"#333"
+							"font-color":"#333",
+							"font-weight":0,
+							"font-family":"Noto Sans"
 						},
 						"animation":{
 							"effect":"2",
@@ -204,8 +222,12 @@ export default Ember.Controller.extend({
 							"sequence":"1"
 						}
 					},
+					"plotarea":{
+						"margin":"8%"
+					},
 					"tooltip":{
 						"fontSize":15,
+						"font-family":"Noto Sans",
 						"align":"left",
 						"borderRadius":3,
 						"borderWidth":2,
@@ -231,12 +253,12 @@ export default Ember.Controller.extend({
 						"background-color":"#43C774"
 					},
 					{
-						"text":"Short-term Assets",
+						"text":"Short-term<br>Assets",
 						"values":[919709],
 						"background-color":"#80BA96"
 					},
 					{
-						"text":"Other Assets",
+						"text":"Other<br>Assets",
 						"values":[57330],
 						"background-color":"#2E4737"
 					}
@@ -251,11 +273,13 @@ export default Ember.Controller.extend({
 			        "background-color":"none",
 			        "title":{
 			            "text":"Sales Revenue",
+			            "font-family":"Noto Sans",
 			            "background-color":"none",
 			            "color":"#333"
 			        },
 			        "plotarea":{
-			            
+			            "margin-top":"14%",
+			            "margin-bottom":"18%"
 			        },
 			        "scaleX":{
 			            "guide":{
@@ -269,11 +293,13 @@ export default Ember.Controller.extend({
 			            "line-color":"#666",
 			            "item":{
 			                "wrapText":true,
-			                "color":"#333"
+			                "color":"#333",
+			                "font-family":"Noto Sans",
 			            }
 			        },
 			        "tooltip":{
 			            "fontSize":15,
+			            "font-family":"Noto Sans",
 			            "align":"left",
 			            "borderRadius":3,
 			            "borderWidth":2,
@@ -297,7 +323,8 @@ export default Ember.Controller.extend({
 			            },
 			            "item":{
 			                "wrapText":true,
-			                "color":"#333"
+			                "color":"#333",
+			                "font-family":"Noto Sans"
 			            },
 			            "short":true,
 			            "thousands-separator":","

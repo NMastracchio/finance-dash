@@ -1,17 +1,14 @@
 $tab-colors: rgb(222,98,98) rgb(95,171,223) rgb(114,197,127) rgb(157,99,222) rgb(99,111,221);
-
 @mixin top-box-shadow($color){
 	box-shadow: inset 0px 25px 0 -20px $color;
 	-moz-box-shadow: inset 0px 25px 0 -20px $color;
 	-webkit-box-shadow: inset 0px 25px 0 -20px $color;
 }
-
 @mixin side-box-shadow($width, $color){
 	box-shadow: inset $width 0 0 -20px $color;
 	-moz-box-shadow: inset $width 0 0 -20px $color;
 	-webkit-box-shadow: inset $width 0 0 -20px $color;
 }
-
 @mixin nav-ul {
 	list-style-type: none;
 	padding: 0;
@@ -22,7 +19,6 @@ $tab-colors: rgb(222,98,98) rgb(95,171,223) rgb(114,197,127) rgb(157,99,222) rgb
 		text-align: center;
 	}
 }
-
 html,body {
 	width: 100%;
 	height: 100%;
@@ -41,7 +37,7 @@ html,body {
 	}
 }
 .side-nav {
-	width:25%;
+	width:20%;
 	position:absolute;
 	top:72px;
 	bottom: 0;
@@ -69,24 +65,21 @@ html,body {
 	}
 }
 .content-container {
-	width: 75%;
+	width: 80%;
 	position: absolute;
-	left: 25%;
+	left: 20%;
 	top: 72px;
 	bottom: 0;
-	.content-header,.content-content{
+	.content-nav,.content-content{
 		box-shadow: inset 20px 0px 2px -20px rgba(0, 0, 0, 0.3);
 		-moz-box-shadow: inset 20px 0px 2px -20px rgba(0, 0, 0, 0.3);
 		-webkit-box-shadow: inset 20px 0px 2px -20px rgba(0, 0, 0, 0.3);
 	}
-	.content-header {
+	.content-nav {
 		height: 60px;
 		line-height: 60px;
 		background-color: rgb(247,246,242);
 		border-bottom: 1px solid darken(rgb(247,246,242),20%);
-		h2 {
-			margin: 0 0 0 12px;
-		}
 		ul {
 			@include nav-ul;
 			li {
@@ -112,7 +105,6 @@ html,body {
 		background-color:rgb(242,242,240);
 	}
 }
-
 .clearfix {
 	&:after {
 		content: "";
