@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 			myRenderOptions:{
-				"height":"540",
+				"height":"700",
 				"width":"100%",
 				"background-color":"none"
 			},
